@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{EC7DB6A7-9CBE-44A2-A74F-FCA38EEA5BF8}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyConsoleLibrary/BookMethods.cs">
+    <Files>
+      <File FileName="MyConsoleLibrary/Program.cs" Line="44" Column="46" />
+      <File FileName="MyConsoleLibrary/BookFields.cs" Line="4" Column="8" />
+      <File FileName="MyConsoleLibrary/BookMethods.cs" Line="6" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MyConsoleLibrary" expanded="True">
+            <Node name="MyConsoleLibrary" expanded="True">
+              <Node name="BookMethods.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MyConsoleLibrary PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
