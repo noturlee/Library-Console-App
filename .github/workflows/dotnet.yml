@@ -1,35 +1,33 @@
-# Workflow for building and testing a .NET project
-# Documentation: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
 name: Build and Test .NET Project
 
-# Define when this workflow should run
 on:
   push:
-    branches: ["main"]  # Trigger on push to the "main" branch
+    branches: ["main"]
   pull_request:
-    branches: ["main"]  # Trigger on pull requests to the "main" branch
+    branches: ["main"]
 
-# Define the job(s) in this workflow
 jobs:
-  build-and-test:  # A descriptive name for the job
+  build-and-test:
+    runs-on: ubuntu-latest
 
-    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
-
-    steps:  # The steps to execute within this job
-    - name: Checkout repository  # Step to check out your code
+    steps:
+    - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Setup .NET  # Step to set up the .NET environment
+    - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x  # Specify .NET version (can adjust as needed)
+        dotnet-version: 8.0.x
 
-    - name: Restore dependencies  # Step to restore NuGet dependencies
-      run: dotnet restore
-
-    - name: Build the project  # Step to build the project
-      run: dotnet build --no-restore  # '--no-restore' assumes dependencies are already restored
-
-    - name: Run unit tests  # Step to run unit tests
-      run: dotnet test --no-build --verbosity normal  # Run tests, without rebuilding
+    # Navigate to the directory where your project/solution resides
+    - name: Change to project directory
+      run: cd MyConsoleLibrary  # Adjust if your project is in a different folder
+    
+    - name: Restore dependencies
+      run: dotnet restore MyConsoleLibrary.csproj  # Use the correct project file
+    
+    - name: Build the project
+      run: dotnet build MyConsoleLibrary.csproj --no-restore  # Build specifying project
+    
+    - name: Run unit tests
+      run: dotnet test MyConsoleLibrary.csproj --no-build --verbosity normal  # Test specifying project
