@@ -14,19 +14,23 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Verify project exists  # Additional step to check if project file exists
+      run: |
+        if [ ! -f "MyConsoleLibrary/MyConsoleLibrary.csproj" ]; then
+          echo "Project file not found!"
+          exit 1
+        fi
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x  # Adjust this version as needed
+        dotnet-version: 8.0.x
 
-    - name: Navigate to project directory
-      run: cd MyConsoleLibrary  # Change to the correct directory
-    
     - name: Restore dependencies
-      run: dotnet restore MyConsoleLibrary.csproj  # Explicit project reference
-    
+      run: dotnet restore MyConsoleLibrary/MyConsoleLibrary.csproj  # Explicit path
+
     - name: Build the project
-      run: dotnet build MyConsoleLibrary.csproj --no-restore  # Explicit project reference
+      run: dotnet build MyConsoleLibrary/MyConsoleLibrary.csproj --no-restore  # Explicit path
 
     - name: Run unit tests
-      run: dotnet test MyConsoleLibrary.csproj --no-build --verbosity normal  # Test specific project
+      run: dotnet test MyConsoleLibrary/MyConsoleLibrary.csproj --no-build --verbosity normal  # Explicit path
