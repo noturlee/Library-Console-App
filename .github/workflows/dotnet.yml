@@ -16,7 +16,7 @@ jobs:
 
     - name: Verify project exists  # Additional step to check if project file exists
       run: |
-        if [ ! -f "MyConsoleLibrary.csproj" ]; then
+        if [ ! -f "MyConsoleLibrary/MyConsoleLibrary/MyConsoleLibrary.csproj" ]; then
           echo "Project file not found!"
           exit 1
         fi
