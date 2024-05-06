@@ -15,7 +15,7 @@ namespace Library
             //be displayed to the user.
             if (Page > 300)
             {
-                Console.WriteLine("WARNING! \nThis book exceeds 300 pages!");
+                Console.WriteLine("WARNING! \nThis book exceeds 300 pages! It may take you some time to finish this book...");
             }
             return Page;
         }
