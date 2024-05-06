@@ -1,0 +1,35 @@
+# Workflow for building and testing a .NET project
+# Documentation: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: Build and Test .NET Project
+
+# Define when this workflow should run
+on:
+  push:
+    branches: ["main"]  # Trigger on push to the "main" branch
+  pull_request:
+    branches: ["main"]  # Trigger on pull requests to the "main" branch
+
+# Define the job(s) in this workflow
+jobs:
+  build-and-test:  # A descriptive name for the job
+
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+
+    steps:  # The steps to execute within this job
+    - name: Checkout repository  # Step to check out your code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET  # Step to set up the .NET environment
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x  # Specify .NET version (can adjust as needed)
+
+    - name: Restore dependencies  # Step to restore NuGet dependencies
+      run: dotnet restore
+
+    - name: Build the project  # Step to build the project
+      run: dotnet build --no-restore  # '--no-restore' assumes dependencies are already restored
+
+    - name: Run unit tests  # Step to run unit tests
+      run: dotnet test --no-build --verbosity normal  # Run tests, without rebuilding
