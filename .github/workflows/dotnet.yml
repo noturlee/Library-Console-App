@@ -1,4 +1,4 @@
-name: Build and Test .NET Project
+name: Build and Test .NET Console App
 
 on:
   push:
@@ -17,17 +17,16 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 8.0.x  # Adjust this version as needed
 
-    # Navigate to the directory where your project/solution resides
-    - name: Change to project directory
-      run: cd MyConsoleLibrary  # Adjust if your project is in a different folder
+    - name: Navigate to project directory
+      run: cd MyConsoleLibrary  # Change to the correct directory
     
     - name: Restore dependencies
-      run: dotnet restore MyConsoleLibrary.csproj  # Use the correct project file
+      run: dotnet restore MyConsoleLibrary.csproj  # Explicit project reference
     
     - name: Build the project
-      run: dotnet build MyConsoleLibrary.csproj --no-restore  # Build specifying project
-    
+      run: dotnet build MyConsoleLibrary.csproj --no-restore  # Explicit project reference
+
     - name: Run unit tests
-      run: dotnet test MyConsoleLibrary.csproj --no-build --verbosity normal  # Test specifying project
+      run: dotnet test MyConsoleLibrary.csproj --no-build --verbosity normal  # Test specific project
