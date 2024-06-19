@@ -64,6 +64,24 @@ Once the application is running, you'll be presented with a simple command-line 
 - [ ] Enhance user interface for better usability
 - [ ] Make a WPF APP
 
+## Application Progress
+
+Here's a fake graph to visualize the progress of the project:
+
+```
+Feature                 | Progress
+----------------------- | ---------------------------------
+Book Creation           | █████████████████████████ 100%
+Shelf Storage           | █████████████████████████ 100%
+List Books              | █████████████████████████ 100%
+Search Books            | ██████████               50%
+Book Deletion           | ██████                   40%
+Persistence             | ████                     20%
+User Interface          | ██                       10%
+External API            |                          0%
+
+```
+
 ## Contributing
 
 Contributions to My Console Library are welcome! If you have any ideas for new features, improvements, or bug fixes, feel free to submit a pull request. Make sure to follow the contribution guidelines outlined in the repository.
