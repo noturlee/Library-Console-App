@@ -102,7 +102,7 @@ Contributions to My WPF Library are welcome! If you have any ideas for new featu
 ## Acknowledgements
 
 - Built with love and dedication by Leighché Jaikarran.
-- Future Collaborator Naiya Haribhai
+- Collaborator Naiya Haribhai.
 
 ## Support
 
