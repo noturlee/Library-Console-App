@@ -1,4 +1,6 @@
-# My Console Library
+![readmebanner](https://github.com/noturlee/Library-Console-App/assets/100778149/7045bd4a-4fb5-4dc6-a1e5-17f2686104df)
+
+# Librare.io
 
 Welcome to My Console Library! This application provides a convenient way to manage your personal book collection right from the comfort of your console. With this library application, you can effortlessly create a single book and store it in a shelf (represented by an array), enabling you to build and organize your own personal library with ease.
 
