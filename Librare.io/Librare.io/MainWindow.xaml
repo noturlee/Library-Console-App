@@ -1,0 +1,23 @@
+﻿<Window x:Class="Librare.io.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Librare.io"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush        ImageSource="https://images.unsplash.com/photo-1490126296131-3de6bd234be6?q=80&amp;w=1770&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+        </Grid.Background>
+        <TextBox x:Name="BookNameTextBox" HorizontalAlignment="Center" Margin="0,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" Height="27"/>
+        <TextBox x:Name="AuthorTextBox" HorizontalAlignment="Center" Margin="0,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" Height="27"/>
+        <TextBox x:Name="IsbnTextBox" HorizontalAlignment="Center" Margin="0,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" Height="27"/>
+        <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Center" Margin="0,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="109" Width="340"/>
+        <Button Content="Press Me" HorizontalAlignment="Center" Margin="0,366,0,0" VerticalAlignment="Top" Height="36" Width="172" Click="Button_Click" Background="#FFBAC855" BorderBrush="White"/>
+        <Label Content="Book Name" HorizontalAlignment="Left" Margin="230,33,0,0" VerticalAlignment="Top"/>
+        <Label Content="Author" HorizontalAlignment="Left" Margin="230,96,0,0" VerticalAlignment="Top"/>
+        <Label Content="ISBN" HorizontalAlignment="Left" Margin="231,159,0,0" VerticalAlignment="Top"/>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="230,222,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
